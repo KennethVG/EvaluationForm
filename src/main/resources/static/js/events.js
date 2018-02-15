@@ -1,8 +1,18 @@
 let subtopics = [];
 
+let selectedCourse;
+let selectedInstructor;
+
 $("select").change(function () {
-    let value= $("#select-subtopic").find("option:selected").text();
-    subtopics.push(value);
+    //let subtopic= $("#select-subtopic").find("option:selected").text();
+    let course= $("#dropdownlist-course").find("option:selected");
+    let instructor = $("#dropdownlist-instructor").find("option:selected");
+    
+
+    selectedCourse = course.val();
+    selectedInstructor = instructor.val();
+
+   // subtopics.push(value);
 });
 
 $("#submit").click(function () {

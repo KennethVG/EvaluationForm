@@ -10,4 +10,10 @@ $(function () {
     showAllTopics();
 
     $("#currentDate").html(day.toString() + "-" + month.toString() + "-" + year.toString());
+
+    $("#submit").click(function() { 
+        postEvaluation();
+    });
+
+
 });

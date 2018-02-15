@@ -1,6 +1,7 @@
 package be.oak3.evaluationform.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -17,7 +18,6 @@ public class Instructor {
     private String name;
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "instructors")
-    @JsonBackReference
     private Set<Course> courses;
 
     public Instructor() {

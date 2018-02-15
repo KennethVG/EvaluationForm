@@ -23,7 +23,6 @@ public class Student {
     private String eMail;
 
     @ManyToMany
-    @JsonManagedReference
     @JoinTable(name = "student_subtopic", joinColumns = @JoinColumn(name = "student_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "subtopic_id", referencedColumnName = "id"))
     private Set<Subtopic> studentSubtopics;
 
