@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Course Evaluation Form</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <div id="top-header">
+        <div id="logo" class="row">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <img src="images/oak3-logo.png" id="img-logo" alt="logo">
+            </div>
+            <div class="col-md-8 col-sm-12 col-xs-12" id="title">
+                <h1>COURSE EVALUATION FORM</h1>
+            </div>
+            <div id="currentDate" class="col-md-1 col-sm-12 col-xs-12">
+            </div>
+        </div>
+    </div>
+    <form id="myForm" action="mailto:kenneth.vangijsel@oak3.be" method="post">
+        <div class="form-group">
+            <div class="row" id="studentname">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control" name="input-firstname" placeholder="Firstname" required>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control" name="input-lastname" placeholder="Lastname" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row" id="studentcontact">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <input type="email" class="form-control" name="input-email" placeholder="name@example.com" required>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control" name="input-phone" placeholder="phonenumber" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row" id="course">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <label for="dropdownlist-course">Course</label>
+                    <select class="form-control" id="dropdownlist-course" name="dropdown-course" required>
+                        <!--dynamicly generated-->
+                    </select>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <label for="dropdownlist-instructor">Instructor</label>
+                    <select class="form-control" id="dropdownlist-instructor" name="dropdown-instructor" required>
+                        <!--dynamicly generated-->
+                    </select>
+                </div>
+            </div>
+        </div>
+        <br> Please indicate how you would rate the following questions : 1=Very weak 2=Weak 3=Average 4=Good 5=Very
+        Good
+        <br>
+        <br>
+        <div class="form-group">
+            <div class="container">
+                <div class="col-md-11 col-sm-12 col-xs-12 category">
+                    <label class="topic-title">
+                        GENERAL
+                    </label>
+                    <div class="row" id=questions-cat-general>
+                        <!--dynamicly generated-->
+                    </div>
+                </div>
+                <div class="col-md-11 col-sm-12 col-xs-12 category">
+                    <label class="topic-title">
+                        CLASSROOM
+                    </label>
+                    <div class="row" id=questions-cat-classroom>
+                        <!--dynamicly generated-->
+                    </div>
+                </div>
+
+
+                <div class="col-md-11 col-sm-12 col-xs-12 category">
+                    <label class="topic-title">
+                        INSTRUCTOR
+                    </label>
+                    <div class="row" id=questions-cat-instructor>
+                        <!--dynamicly generated-->
+                    </div>
+                </div>
+                <div class="col-md-11 col-sm-12 col-xs-12 category">
+                    <label class="topic-title">
+                        CONTENT
+                    </label>
+                    <div class="row" id=questions-cat-content>
+                        <!--dynamicly generated-->
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <div class="row" id="topic-comment">
+                    <div class="col-md-6 col-sm-12 xol-xs-12">
+                        <label for="select-subtopic">Email notification topics</label>
+                        <select multiple class="form-control" id="select-subtopic" name="select-subtopic">
+                            <!--dynamicly generated-->
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-12 xol-xs-12">
+                        <div class="form-group">
+                            <label for="CommentsTextarea">Comments/suggestion</label>
+                            <textarea class="form-control" id="CommentsTextarea" name="CommentsTextarea" rows="8"
+                                      title="CommentsTextarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-12 xol-xs-12">
+                    <button type="submit" class="btn btn-success" id="submit">
+                        <i class="far fa-arrow-alt-circle-up"></i>&nbsp;Submit
+                    </button>
+                </div>
+                <div class="col-md-6 col-sm-12 xol-xs-12">
+                    <button type="button" class="btn btn-secondary" id="print">
+                        <i class="fas fa-print"></i>&nbsp;Print
+                    </button>
+                </div>
+            </div>
+    </form>
+</div>
+<br>
+<footer style="text-align:center">&copy Kenneth Van Gijsel - Oak3 Academy</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="js/ajax.js"></script>
+<script src="js/events.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

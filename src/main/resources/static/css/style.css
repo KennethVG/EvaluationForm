@@ -1,0 +1,65 @@
+body {
+    font-family: 'Indie Flower', cursive !important;
+    font-size: 1em !important;
+    color: #333333;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#top-header {
+    margin: 10px;
+}
+
+#select-subtopic{
+    height: 210px;
+}
+
+#img-logo {
+    height: 100px;
+    width: 100px;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #8ECC82;
+}
+
+.topic-title{
+    font-weight: bold;
+}
+
+#myForm {
+    border: 1px solid green;
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+.category {
+    border: 1px solid gray;
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    margin: 0 auto;
+}
+
+.btn-success, .btn-secondary {
+    margin: auto;
+    display: block;
+}
+
+@media print {
+    body {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 1em;
+        color: #333333;
+        margin: 2cm 2cm 1.5cm;
+    }
+    footer, button {
+        display:none;
+    }
+
+    #cat-inst-content, #cat-gen-class {
+        display: block;
+        width: 100%;
+    }
+}
+
