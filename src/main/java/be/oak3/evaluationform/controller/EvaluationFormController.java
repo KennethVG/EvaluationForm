@@ -34,7 +34,6 @@ public class EvaluationFormController {
 
     @GetMapping("/instructors")
     public ResponseEntity findAllInstructors() {
-        System.out.println("Controller : @GetMapping(\"/instructors\")");
         return ResponseEntity.ok(instructorService.findAll());
     }
 
@@ -103,6 +102,11 @@ public class EvaluationFormController {
         return ResponseEntity.ok(studentService.findAll());
     }
 
+    @GetMapping("/laststudent")
+    public ResponseEntity findLastStudent() {
+        return ResponseEntity.ok(studentService.findDistinctFirstByOrderByIdDesc());
+    }
+
     @PostMapping("/student")
     public ResponseEntity addStudent(@RequestBody Student student) {
         return ResponseEntity.ok(studentService.addStudent(student));
@@ -111,6 +115,11 @@ public class EvaluationFormController {
     @GetMapping("/evaluations")
     public ResponseEntity findAllEvaluations() {
         return ResponseEntity.ok(evaluationService.findAll());
+    }
+
+    @GetMapping("/lastevaluation")
+    public ResponseEntity findLastEvaluation(){
+        return ResponseEntity.ok(evaluationService.findDistinctFirstByOrderByDateDesc());
     }
 
     @PostMapping("/evaluation")
@@ -122,5 +131,4 @@ public class EvaluationFormController {
     public ResponseEntity findQuestionsByCategory(@PathVariable Category category) {
         return ResponseEntity.ok(questionService.findByCategory(category));
     }
-
 }

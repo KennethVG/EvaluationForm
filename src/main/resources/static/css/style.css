@@ -1,5 +1,5 @@
 body {
-    font-family: 'Indie Flower', cursive !important;
+    font-family: oak3-font, sans-serif;
     font-size: 1em !important;
     color: #333333;
     width: 90%;
@@ -8,6 +8,10 @@ body {
 
 #top-header {
     margin: 10px;
+}
+
+#currentDate{
+    font-size: 0.8em;
 }
 
 #select-subtopic{
@@ -29,7 +33,7 @@ h1 {
 }
 
 #myForm {
-    border: 1px solid green;
+    border: 1px solid #8ECC82;
     border-radius: 5px 5px 5px 5px;
     padding: 5px 5px 5px 5px;
 }
@@ -41,9 +45,24 @@ h1 {
     margin: 0 auto;
 }
 
+.btn-success {
+    background-color: #8ECC82;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #8ECC82;
+}
+
 .btn-success, .btn-secondary {
     margin: auto;
     display: block;
+    border-color: #8ECC82;
+}
+
+@font-face {
+    font-family: oak3-font;
+    src: url(../font/proxima.otf);
 }
 
 @media print {
@@ -62,4 +81,3 @@ h1 {
         width: 100%;
     }
 }
-

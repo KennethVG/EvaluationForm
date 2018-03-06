@@ -27,9 +27,10 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public int deleteStudent(Student student) {
-        if(studentJPARepository.exists(student.getId())){
-        studentJPARepository.delete(student);}
-        return studentJPARepository.exists(student.getId())?0:1 ;
+        if (studentJPARepository.exists(student.getId())) {
+            studentJPARepository.delete(student);
+        }
+        return studentJPARepository.exists(student.getId()) ? 0 : 1;
     }
 
     @Override
@@ -37,8 +38,8 @@ public class StudentServiceImpl implements StudentService {
         Student updatedStudent = null;
         if (studentJPARepository.exists(student.getId())) {
             updatedStudent = studentJPARepository.saveAndFlush(student);
-       }
-     return updatedStudent==null ? 0 : 1;
+        }
+        return updatedStudent == null ? 0 : 1;
     }
 
     @Override
@@ -47,5 +48,14 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student findOne(int id) {return studentJPARepository.findOne(id);}
+    public Student findOne(int id) {
+        return studentJPARepository.findOne(id);
+    }
+
+    @Override
+    public Student findDistinctFirstByOrderByIdDesc() {
+        return studentJPARepository.findDistinctFirstByOrderByIdDesc();
+    }
+
+
 }

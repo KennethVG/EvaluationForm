@@ -1,4 +1,6 @@
 const url = "http://localhost:8080/evaluationform";
+studentId = 1;
+evaluationId= 1;
 
 //*******************functions ************************************************************************
 function showAllInstructors() {
@@ -27,7 +29,7 @@ function showAllCourses() {
 
 function showQuestionsByCategory(category) {
 
-    $.getJSON( url + "/questions/" + category,
+    $.getJSON(url + "/questions/" + category,
         function (response) {
             let dynamicHTML = "";
             for (let aQuestion of response) {
@@ -65,7 +67,7 @@ function showQuestionsByCategory(category) {
                             </div>`;
             }
             category = category.toLowerCase();
-            $("#questions-cat-" + category).html(dynamicHTML);      
+            $("#questions-cat-" + category).html(dynamicHTML);
         }
     );
 }

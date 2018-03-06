@@ -14,4 +14,6 @@ public interface EvaluationService {
     List<Evaluation> findAll();
 
     Evaluation findOne(int id);
+
+    Evaluation findDistinctFirstByOrderByDateDesc();
 }

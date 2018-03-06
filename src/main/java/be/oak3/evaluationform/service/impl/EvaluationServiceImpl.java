@@ -51,4 +51,9 @@ public class EvaluationServiceImpl implements EvaluationService {
     public Evaluation findOne(int id) {
         return evaluationJPARepository.findOne(id);
     }
+
+    @Override
+    public Evaluation findDistinctFirstByOrderByDateDesc() {
+        return evaluationJPARepository.findDistinctFirstByOrderByDateDesc();
+    }
 }

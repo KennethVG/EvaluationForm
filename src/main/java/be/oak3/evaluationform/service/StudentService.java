@@ -16,4 +16,6 @@ public interface StudentService {
 
     Student findOne(int id);
 
+    Student findDistinctFirstByOrderByIdDesc();
+
 }

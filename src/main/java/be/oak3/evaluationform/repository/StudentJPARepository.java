@@ -6,4 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface StudentJPARepository extends JpaRepository<Student,Integer> {
 
 
+    Student findDistinctFirstByOrderByIdDesc();
+
 }
